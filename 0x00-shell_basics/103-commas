@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | grep -v '/$' | awk '{printf "%s, ", $0}'; ls -ap1 | grep '/$' | awk '{printf "%s/, ", $0}' | sed 's/,$/\n/'
+printf "%s, " $(ls -ap1 | awk '!/\.\.$/ && !/\.$/') | awk '{print substr($0, 1, length($0)-2)}'
