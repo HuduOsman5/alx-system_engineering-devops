@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 | sort -df | awk '{ORS=(NR%2==0)?", ":"\n"}; 1' | sed -e 's/$/\//g' -e '$s/,//'
+printf "%s" ./* | sort -df | awk 'BEGIN {ORS=""} {print $0, (/\/$/) ? ", " : "\n"}'
