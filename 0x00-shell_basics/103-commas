@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%s, " $(ls -ap1 | awk '!/\.\.$/ && !/\.$/') | awk '{print substr($0, 1, length($0)-2)}'
+printf "%s, " $(ls -ap1 | awk '!/\.\.$/  !/\.$/') | awk '{print substr($0, 1, length($0)-2)}'
