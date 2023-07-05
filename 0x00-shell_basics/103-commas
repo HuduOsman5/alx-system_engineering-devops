@@ -1,1 +1,2 @@
-for entry in ./*; do printf "%s, " "$(basename "$entry")"; done | sort -df | awk '{ printf "%s", $0 } END { print "" }'
+#!/bin/bash
+printf "./, ../" ls -1Ap | grep -v '^\.\{1,2\}/' | sort -df | tr '\n' ', ' | sed 's/,$/\n/'
