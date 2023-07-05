@@ -1,3 +1,2 @@
 #!/bin/bash
-ls -la . ../ /boot | awk '{ printf "%-32s %s %s %s %s %s %s\n", $1, $2, $3, $4, $5, $6, $7 }'
-
+ls -la . .. /boot
