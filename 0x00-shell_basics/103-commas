@@ -1,2 +1,1 @@
-#!/bin/bash
-printf "%s" ./* | sort -df | awk 'BEGIN {ORS=""} {print $0, (/\/$/) ? ", " : "\n"}'
+for entry in ./*; do printf "%s, " "$(basename "$entry")"; done | sort -df | awk '{ printf "%s", $0 } END { print "" }'
