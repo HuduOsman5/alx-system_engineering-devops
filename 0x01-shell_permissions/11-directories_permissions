@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type d ! -path "./.*" -exec chmod a+x {} \n
+find . -type d ! -path "./.*" -exec chmod ugo+x {} +
