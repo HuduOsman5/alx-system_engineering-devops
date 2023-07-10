@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Best School" > '*\''"Best School"\'\''*$?*****:)'  # Create the file with the desired content
+echo "Best School" > '*'\''"Best School"'\''*$?*****:)'
